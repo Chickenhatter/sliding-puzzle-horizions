@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cqiigxwyhv0jm" path="res://puzzles/horizons.png" id="1_ltegn"]
 [ext_resource type="Script" uid="uid://ck6qf4qyp2b22" path="res://h_11.gd" id="1_pelj5"]
+[ext_resource type="Script" uid="uid://bi5airxccdon3" path="res://h_12.gd" id="3_c0h3d"]
+[ext_resource type="Script" uid="uid://db2ai8m37si1k" path="res://h_13.gd" id="4_xm0tx"]
+[ext_resource type="Script" uid="uid://c554yo4qsnem2" path="res://h_14.gd" id="5_tuj24"]
+[ext_resource type="Script" uid="uid://ee6fpcfsdfpr" path="res://h_21.gd" id="6_ef2x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltegn"]
 size = Vector2(148, 148)
@@ -30,6 +34,51 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c0h3d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm0tx"]
+atlas = ExtResource("1_ltegn")
+region = Rect2(298, 0, 149, 149)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pelj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm0tx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuj24"]
+atlas = ExtResource("1_ltegn")
+region = Rect2(447, 0, 149, 149)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ef2x7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuj24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4l1s"]
+atlas = ExtResource("1_ltegn")
+region = Rect2(0, 149, 149, 149)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4l1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4l1s")
 }],
 "loop": true,
 "name": &"default",
@@ -2693,21 +2742,9 @@ texture = ExtResource("1_ltegn")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gnjkn")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xm0tx"]
-atlas = ExtResource("1_ltegn")
-region = Rect2(298, 0, 149, 149)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuj24"]
-atlas = ExtResource("1_ltegn")
-region = Rect2(447, 0, 149, 149)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ef2x7"]
 atlas = ExtResource("1_ltegn")
 region = Rect2(596, 0, 149, 149)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w4l1s"]
-atlas = ExtResource("1_ltegn")
-region = Rect2(0, 149, 149, 149)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs8ob"]
 atlas = ExtResource("1_ltegn")
@@ -2789,15 +2826,6 @@ region = Rect2(596, 596, 149, 149)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c0h3d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xm0tx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuj24")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ef2x7")
 }, {
 "duration": 1.0,
@@ -2871,29 +2899,89 @@ animations = [{
 
 [node name="tiles" type="Node2D" parent="Node2D" unique_id=1821559248]
 
-[node name="h11" type="CharacterBody2D" parent="Node2D/tiles" unique_id=1714769047]
-position = Vector2(76, 77)
+[node name="row_1" type="Node2D" parent="Node2D/tiles" unique_id=530363807]
+
+[node name="h11" type="CharacterBody2D" parent="Node2D/tiles/row_1" unique_id=1714769047]
+position = Vector2(324, 76)
+platform_floor_layers = 0
 script = ExtResource("1_pelj5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/h11" unique_id=2068634910]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h11" unique_id=2068634910]
 shape = SubResource("RectangleShape2D_ltegn")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D/tiles/h11" unique_id=781335895]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D/tiles/row_1/h11" unique_id=781335895]
 sprite_frames = SubResource("SpriteFrames_ltegn")
 
-[node name="h11" type="Area2D" parent="Node2D/tiles/h11" unique_id=1531962970]
+[node name="h11" type="Area2D" parent="Node2D/tiles/row_1/h11" unique_id=1531962970]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/h11/h11" unique_id=1786887833]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h11/h11" unique_id=1786887833]
 shape = SubResource("RectangleShape2D_ltegn")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/tiles" unique_id=1009754833]
-position = Vector2(880, 83)
+[node name="h12" type="CharacterBody2D" parent="Node2D/tiles/row_1" unique_id=1009754833]
+position = Vector2(473, 76)
+platform_floor_layers = 0
+script = ExtResource("3_c0h3d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/CharacterBody2D" unique_id=431092817]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h12" unique_id=431092817]
 shape = SubResource("RectangleShape2D_ltegn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/tiles/CharacterBody2D" unique_id=1726176384]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/tiles/row_1/h12" unique_id=1726176384]
 sprite_frames = SubResource("SpriteFrames_c0h3d")
+
+[node name="h12" type="Area2D" parent="Node2D/tiles/row_1/h12" unique_id=422780953]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h12/h12" unique_id=1591948882]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="h13" type="CharacterBody2D" parent="Node2D/tiles/row_1" unique_id=239287937]
+position = Vector2(622, 76)
+platform_floor_layers = 0
+script = ExtResource("4_xm0tx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h13" unique_id=1541184396]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/tiles/row_1/h13" unique_id=295550862]
+sprite_frames = SubResource("SpriteFrames_pelj5")
+
+[node name="h13" type="Area2D" parent="Node2D/tiles/row_1/h13" unique_id=502486669]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h13/h13" unique_id=1632487927]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="h14" type="CharacterBody2D" parent="Node2D/tiles/row_1" unique_id=531588044]
+position = Vector2(770, 76)
+platform_floor_layers = 0
+script = ExtResource("5_tuj24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h14" unique_id=708215286]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/tiles/row_1/h14" unique_id=2015266212]
+sprite_frames = SubResource("SpriteFrames_ef2x7")
+
+[node name="h14" type="Area2D" parent="Node2D/tiles/row_1/h14" unique_id=1825466358]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_1/h14/h14" unique_id=306681567]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="row_w" type="Node2D" parent="Node2D/tiles" unique_id=731135888]
+
+[node name="h21" type="CharacterBody2D" parent="Node2D/tiles/row_w" unique_id=435178495]
+position = Vector2(324, 225)
+platform_floor_layers = 0
+script = ExtResource("6_ef2x7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_w/h21" unique_id=779499757]
+shape = SubResource("RectangleShape2D_ltegn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/tiles/row_w/h21" unique_id=1795594337]
+sprite_frames = SubResource("SpriteFrames_w4l1s")
+
+[node name="h21" type="Area2D" parent="Node2D/tiles/row_w/h21" unique_id=730299277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tiles/row_w/h21/h21" unique_id=1131482287]
+shape = SubResource("RectangleShape2D_ltegn")
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=146686748]
 
@@ -2905,8 +2993,13 @@ tile_set = SubResource("TileSet_0b5ud")
 position = Vector2(78, 570)
 sprite_frames = SubResource("SpriteFrames_3ifpx")
 
-[connection signal="mouse_entered" from="Node2D/tiles/h11" to="Node2D/tiles/h11" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/tiles/h11" to="Node2D/tiles/h11" method="_on_mouse_exited"]
-[connection signal="mouse_shape_entered" from="Node2D/tiles/h11" to="Node2D/tiles/h11" method="_on_mouse_shape_entered"]
-[connection signal="mouse_entered" from="Node2D/tiles/h11/h11" to="Node2D/tiles/h11" method="_on_h_11_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/tiles/h11/h11" to="Node2D/tiles/h11" method="_on_h_11_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/tiles/row_1/h11/h11" to="Node2D/tiles/row_1/h11" method="_on_h_11_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/tiles/row_1/h11/h11" to="Node2D/tiles/row_1/h11" method="_on_h_11_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/tiles/row_1/h12/h12" to="Node2D/tiles/row_1/h12" method="_on_h_12_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/tiles/row_1/h12/h12" to="Node2D/tiles/row_1/h12" method="_on_h_12_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/tiles/row_1/h13/h13" to="Node2D/tiles/row_1/h13" method="_on_h_13_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/tiles/row_1/h13/h13" to="Node2D/tiles/row_1/h13" method="_on_h_13_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/tiles/row_1/h14/h14" to="Node2D/tiles/row_1/h14" method="_on_h_14_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/tiles/row_1/h14/h14" to="Node2D/tiles/row_1/h14" method="_on_h_14_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/tiles/row_w/h21/h21" to="Node2D/tiles/row_w/h21" method="_on_h_21_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/tiles/row_w/h21/h21" to="Node2D/tiles/row_w/h21" method="_on_h_21_mouse_exited"]

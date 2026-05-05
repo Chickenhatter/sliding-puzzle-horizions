@@ -34,10 +34,10 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func _on_h_11_mouse_entered() -> void:
+func _on_h_21_mouse_entered() -> void:
 	inside = true
 
 
-func _on_h_11_mouse_exited() -> void:
+func _on_h_21_mouse_exited() -> void:
 	inside = false
 	dragging = false
