@@ -34,7 +34,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (h11 == true) and (h12 == true) and (h13 == true) and (h14 == true) and (h15 == true):
 		if (h21 == true) and (h22 == true) and (h23 == true) and (h24 == true) and (h25 == true):
 			if (h31 == true) and (h32 == true) and (h33 == true) and (h34 == true) and (h35 == true):
@@ -181,3 +181,103 @@ func _on_h_35_body_entered(body: Node2D) -> void:
 func _on_h_35_body_exited(body: Node2D) -> void:
 	if body.name == 'h35':
 		h35 = false
+
+
+func _on_h_41_body_entered(body: Node2D) -> void:
+	if body.name == 'h41':
+		h41 = true
+
+
+func _on_h_41_body_exited(body: Node2D) -> void:
+	if body.name == 'h41':
+		h41 = false
+
+
+func _on_h_42_body_entered(body: Node2D) -> void:
+	if body.name == 'h42':
+		h42 = true
+
+
+func _on_h_42_body_exited(body: Node2D) -> void:
+	if body.name == 'h42':
+		h42 = false
+
+
+func _on_h_43_body_entered(body: Node2D) -> void:
+	if body.name == 'h43':
+		h43 = true
+
+
+func _on_h_43_body_exited(body: Node2D) -> void:
+	if body.name == 'h43':
+		h43 = false
+
+
+func _on_h_44_body_entered(body: Node2D) -> void:
+	if body.name == 'h44':
+		h44 = true
+
+
+func _on_h_44_body_exited(body: Node2D) -> void:
+	if body.name == 'h44':
+		h44 = false
+
+
+func _on_h_45_body_entered(body: Node2D) -> void:
+	if body.name == 'h45':
+		h45 = true
+
+
+func _on_h_45_body_exited(body: Node2D) -> void:
+	if body.name == 'h45':
+		h45 = false
+
+
+func _on_h_51_body_entered(body: Node2D) -> void:
+	if body.name == 'h51':
+		h51 = true
+
+
+func _on_h_51_body_exited(body: Node2D) -> void:
+	if body.name == 'h51':
+		h51 = false
+
+
+func _on_h_52_body_entered(body: Node2D) -> void:
+	if body.name == 'h52':
+		h52 = true
+
+
+func _on_h_52_body_exited(body: Node2D) -> void:
+	if body.name == 'h52':
+		h52 = false
+
+
+func _on_h_53_body_entered(body: Node2D) -> void:
+	if body.name == 'h53':
+		h53 = true
+
+
+func _on_h_53_body_exited(body: Node2D) -> void:
+	if body.name == 'h53':
+		h53 = false
+
+
+func _on_h_54_body_entered(body: Node2D) -> void:
+	if body.name == 'h54':
+		h54 = true
+
+
+func _on_h_54_body_exited(body: Node2D) -> void:
+	if body.name == 'h54':
+		h54 = false
+
+
+func _on_h_55_body_entered(body: Node2D) -> void:
+	if body.name == 'h55':
+		h55 = true
+
+
+func _on_h_55_body_exited(body: Node2D) -> void:
+	if body.name == 'h55':
+		h55 = false
