@@ -41,3 +41,143 @@ func _process(delta: float) -> void:
 				if (h41 == true) and (h42 == true) and (h43 == true) and (h44 == true) and (h45 == true):
 					if (h51 == true) and (h52 == true) and (h53 == true) and (h54 == true) and (h55 == true):
 						print('yayyay')
+
+
+func _on_h_11_body_entered(body: Node2D) -> void:
+	if body.name == 'h11':
+		h11 = true
+
+
+func _on_h_11_body_exited(body: Node2D) -> void:
+	if body.name == 'h11':
+		h11 = false
+
+
+func _on_h_12_body_entered(body: Node2D) -> void:
+	if body.name == 'h12':
+		h12 = true
+
+
+func _on_h_12_body_exited(body: Node2D) -> void:
+	if body.name == 'h12':
+		h12 = false
+
+
+func _on_h_13_body_entered(body: Node2D) -> void:
+	if body.name == 'h13':
+		h13 = true
+
+
+func _on_h_13_body_exited(body: Node2D) -> void:
+	if body.name == 'h13':
+		h13 = false
+
+
+func _on_h_14_body_entered(body: Node2D) -> void:
+	if body.name == 'h14':
+		h14 = true
+
+
+func _on_h_14_body_exited(body: Node2D) -> void:
+	if body.name == 'h14':
+		h14 = false
+
+
+func _on_h_21_body_entered(body: Node2D) -> void:
+	if body.name == 'h21':
+		h21 = true
+
+
+func _on_h_21_body_exited(body: Node2D) -> void:
+	if body.name == 'h21':
+		h21 = false
+
+
+func _on_h_22_body_entered(body: Node2D) -> void:
+	if body.name == 'h22':
+		h22 = true
+
+
+func _on_h_22_body_exited(body: Node2D) -> void:
+	if body.name == 'h22':
+		h22 = false
+
+
+func _on_h_23_body_entered(body: Node2D) -> void:
+	if body.name == 'h23':
+		h23 = true
+
+
+func _on_h_23_body_exited(body: Node2D) -> void:
+	if body.name == 'h23':
+		h23 = false
+
+
+func _on_h_24_body_entered(body: Node2D) -> void:
+	if body.name == 'h24':
+		h24 = true
+
+
+func _on_h_24_body_exited(body: Node2D) -> void:
+	if body.name == 'h24':
+		h24 = false
+
+
+func _on_h_25_body_entered(body: Node2D) -> void:
+	if body.name == 'h25':
+		h25 = true
+
+
+func _on_h_25_body_exited(body: Node2D) -> void:
+	if body.name == 'h25':
+		h25 = false
+
+
+func _on_h_31_body_entered(body: Node2D) -> void:
+	if body.name == 'h31':
+		h31 = true
+
+
+func _on_h_31_body_exited(body: Node2D) -> void:
+	if body.name == 'h31':
+		h31 = false
+
+
+func _on_h_32_body_entered(body: Node2D) -> void:
+	if body.name == 'h32':
+		h32 = true
+
+
+func _on_h_32_body_exited(body: Node2D) -> void:
+	if body.name == 'h32':
+		h32 = false
+
+
+func _on_h_33_body_entered(body: Node2D) -> void:
+	if body.name == 'h33':
+		h33 = true
+
+
+func _on_h_33_body_exited(body: Node2D) -> void:
+	if body.name == 'h33':
+		h33 = false
+
+
+func _on_h_34_body_entered(body: Node2D) -> void:
+	if body.name == 'h34':
+		h34 = true
+
+
+func _on_h_34_body_exited(body: Node2D) -> void:
+	if body.name == 'h34':
+		h34 = false
+
+
+func _on_h_35_body_entered(body: Node2D) -> void:
+	if body.name == 'h35':
+		h35 = true
+
+
+func _on_h_35_body_exited(body: Node2D) -> void:
+	if body.name == 'h35':
+		h35 = false
