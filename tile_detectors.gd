@@ -284,4 +284,4 @@ func _on_h_55_body_exited(body: Node2D) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file('res://base.tscn')
+	get_tree().change_scene_to_file('res://start.tscn')

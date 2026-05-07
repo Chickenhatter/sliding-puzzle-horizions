@@ -50,14 +50,14 @@ func _on_h_11_body_exited(body: Node2D) -> void:
 		h11 = false
 
 
-func _on_h_12_body_entered(body: Node2D) -> void:
-	if body.name == 'h12':
-		h12 = true
+#func _on_h_12_body_entered(body: Node2D) -> void:
+	#if body.name == 'h12':
+		#h12 = true
 
 
-func _on_h_12_body_exited(body: Node2D) -> void:
-	if body.name == 'h12':
-		h12 = false
+#func _on_h_12_body_exited(body: Node2D) -> void:
+	#if body.name == 'h12':
+		#h12 = false
 
 
 func _on_h_13_body_entered(body: Node2D) -> void:
@@ -90,14 +90,14 @@ func _on_h_21_body_exited(body: Node2D) -> void:
 		h21 = false
 
 
-func _on_h_22_body_entered(body: Node2D) -> void:
-	if body.name == 'h22':
-		h22 = true
+#func _on_h_22_body_entered(body: Node2D) -> void:
+	#if body.name == 'h22':
+		#h22 = true
 
 
-func _on_h_22_body_exited(body: Node2D) -> void:
-	if body.name == 'h22':
-		h22 = false
+#func _on_h_22_body_exited(body: Node2D) -> void:
+	#if body.name == 'h22':
+		#h22 = false
 
 
 func _on_h_23_body_entered(body: Node2D) -> void:
@@ -121,13 +121,13 @@ func _on_h_24_body_exited(body: Node2D) -> void:
 
 
 func _on_h_25_body_entered(body: Node2D) -> void:
-	if body.name == 'h25':
-		h25 = true
+	if body.name == 'h22':
+		h22 = true
 
 
 func _on_h_25_body_exited(body: Node2D) -> void:
-	if body.name == 'h25':
-		h25 = false
+	if body.name == 'h22':
+		h22 = false
 
 
 func _on_h_31_body_entered(body: Node2D) -> void:

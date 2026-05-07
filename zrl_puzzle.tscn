@@ -2800,9 +2800,10 @@ position = Vector2(771, 225)
 shape = SubResource("RectangleShape2D_6ukd6")
 
 [node name="h25" type="Area2D" parent="base/tile_detectors/row_2" unique_id=229962899]
+position = Vector2(-445, 76)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="base/tile_detectors/row_2/h25" unique_id=1110971714]
-position = Vector2(920, 225)
+position = Vector2(923, 227)
 shape = SubResource("RectangleShape2D_6ukd6")
 
 [node name="tiles" type="Node2D" parent="base" unique_id=2086533625]
