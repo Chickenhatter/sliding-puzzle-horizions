@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cqiigxwyhv0jm" path="res://puzzles/horizons.png" id="1_gxfi0"]
 [ext_resource type="Texture2D" uid="uid://c5mnpytbwoex2" path="res://assets/frame/Wood_Frame.png" id="2_shuyx"]
-[ext_resource type="Script" uid="uid://da2yg37nwd7tx" path="res://tile_detectors.gd" id="3_akdla"]
+[ext_resource type="Script" uid="uid://d0s8xpw7mk4l5" path="res://tile_detectors2.gd" id="3_gtnnu"]
 [ext_resource type="Script" uid="uid://ck6qf4qyp2b22" path="res://h_11.gd" id="4_iy4g4"]
 [ext_resource type="Texture2D" uid="uid://brqwu68rbmt20" path="res://puzzles/zrl.png" id="5_28p2q"]
+[ext_resource type="Texture2D" uid="uid://fmcbifrg6s1x" path="res://assets/frame/black.png" id="8_gtnnu"]
 [ext_resource type="Script" uid="uid://ee6fpcfsdfpr" path="res://h_21.gd" id="8_x14j7"]
+[ext_resource type="Texture2D" uid="uid://dt3t4gx614vx0" path="res://assets/frame/next_cyan.png" id="9_oug2o"]
 [ext_resource type="Script" uid="uid://bumebyg1pyn8o" path="res://h_22.gd" id="9_wj7xk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwk66"]
@@ -2715,24 +2717,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oug2o"]
-atlas = ExtResource("5_28p2q")
-region = Rect2(206, 0, 206, 206)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_eiw17"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oug2o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ovon2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Node2D" type="Node2D" unique_id=1339896388]
 
 [node name="base" type="Node2D" parent="." unique_id=2008969992]
@@ -2751,7 +2735,7 @@ polygon = PackedVector2Array(249, 1, 249, 747, 995, 747, 995, 6, 995, 1, 250, 1,
 
 [node name="Camera2D" type="Camera2D" parent="base/tilemap" unique_id=387265248]
 position = Vector2(622, 374)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(1.6, 1.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="base/tilemap" unique_id=654236438]
 position = Vector2(657, 401)
@@ -2760,7 +2744,7 @@ texture = ExtResource("2_shuyx")
 
 [node name="tile_detectors" type="Node2D" parent="base" unique_id=1614816883]
 position = Vector2(-150, -1)
-script = ExtResource("3_akdla")
+script = ExtResource("3_gtnnu")
 
 [node name="row_1" type="Node2D" parent="base/tile_detectors" unique_id=1378502301]
 
@@ -2827,7 +2811,7 @@ position = Vector2(-150, -1)
 [node name="row_1" type="Node2D" parent="base/tiles" unique_id=915350852]
 
 [node name="h11" type="CharacterBody2D" parent="base/tiles/row_1" unique_id=1114821478]
-position = Vector2(324, 76)
+position = Vector2(324, 225)
 platform_floor_layers = 0
 script = ExtResource("4_iy4g4")
 
@@ -2846,7 +2830,7 @@ shape = SubResource("RectangleShape2D_ckj27")
 [node name="row_2" type="Node2D" parent="base/tiles" unique_id=1488706879]
 
 [node name="h21" type="CharacterBody2D" parent="base/tiles/row_2" unique_id=170424781]
-position = Vector2(324, 225)
+position = Vector2(473, 225)
 platform_floor_layers = 0
 script = ExtResource("8_x14j7")
 
@@ -2863,7 +2847,7 @@ sprite_frames = SubResource("SpriteFrames_whu5b")
 shape = SubResource("RectangleShape2D_ckj27")
 
 [node name="h22" type="CharacterBody2D" parent="base/tiles/row_2" unique_id=1935830545]
-position = Vector2(473, 225)
+position = Vector2(325, 76)
 platform_floor_layers = 0
 script = ExtResource("9_wj7xk")
 
@@ -2871,6 +2855,7 @@ script = ExtResource("9_wj7xk")
 shape = SubResource("RectangleShape2D_ckj27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="base/tiles/row_2/h22" unique_id=497811248]
+scale = Vector2(0.723, 0.723)
 sprite_frames = SubResource("SpriteFrames_1l6by")
 
 [node name="h22" type="Area2D" parent="base/tiles/row_2/h22" unique_id=1851683347]
@@ -2878,8 +2863,26 @@ sprite_frames = SubResource("SpriteFrames_1l6by")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="base/tiles/row_2/h22/h22" unique_id=499092410]
 shape = SubResource("RectangleShape2D_ckj27")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1503575875]
-sprite_frames = SubResource("SpriteFrames_eiw17")
+[node name="next" type="Node2D" parent="base" unique_id=2046041090]
+position = Vector2(1536, -77)
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="base/next" unique_id=747000052]
+self_modulate = Color(1, 1, 1, 0.5294118)
+position = Vector2(456.66663, 278.3333)
+scale = Vector2(15.86, 9.900001)
+texture = ExtResource("8_gtnnu")
+
+[node name="Button" type="Button" parent="base/next" unique_id=182113142]
+offset_left = 91.666664
+offset_top = 78.33334
+offset_right = 747.6667
+offset_bottom = 408.33334
+
+[node name="Sprite2D2" type="Sprite2D" parent="base/next" unique_id=494846305]
+position = Vector2(424.99997, 336.66666)
+scale = Vector2(9.3, 9.23)
+texture = ExtResource("9_oug2o")
 
 [connection signal="body_entered" from="base/tile_detectors/row_1/h11" to="base/tile_detectors" method="_on_h_11_body_entered"]
 [connection signal="body_exited" from="base/tile_detectors/row_1/h11" to="base/tile_detectors" method="_on_h_11_body_exited"]
@@ -2905,3 +2908,4 @@ sprite_frames = SubResource("SpriteFrames_eiw17")
 [connection signal="mouse_exited" from="base/tiles/row_2/h21/h21" to="base/tiles/row_2/h21" method="_on_h_21_mouse_exited"]
 [connection signal="mouse_entered" from="base/tiles/row_2/h22/h22" to="base/tiles/row_2/h22" method="_on_h_22_mouse_entered"]
 [connection signal="mouse_exited" from="base/tiles/row_2/h22/h22" to="base/tiles/row_2/h22" method="_on_h_22_mouse_exited"]
+[connection signal="pressed" from="base/next/Button" to="base/tile_detectors" method="_on_button_pressed"]
