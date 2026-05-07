@@ -35,12 +35,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if (h11 == true) and (h12 == true) and (h13 == true) and (h14 == true) and (h15 == true):
-		if (h21 == true) and (h22 == true) and (h23 == true) and (h24 == true) and (h25 == true):
-			if (h31 == true) and (h32 == true) and (h33 == true) and (h34 == true) and (h35 == true):
-				if (h41 == true) and (h42 == true) and (h43 == true) and (h44 == true) and (h45 == true):
-					if (h51 == true) and (h52 == true) and (h53 == true) and (h54 == true) and (h55 == true):
-						$"../next".global_position = $"../..".global_position
+	if (h11 == true) and (h12 == true):
+		if (h21 == true) and (h22 == true) and (h23 == true):
+			if (h31 == true) and (h32 == true) and (h33 == true):
+				$"../next".global_position = $"../..".global_position
 
 
 func _on_h_11_body_entered(body: Node2D) -> void:
@@ -284,4 +282,4 @@ func _on_h_55_body_exited(body: Node2D) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file('res://base.tscn')
+	get_tree().change_scene_to_file('res://kyle_puzzle.tscn')

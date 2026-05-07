@@ -39,7 +39,7 @@ func _process(_delta: float) -> void:
 		if (h21 == true) and (h22 == true) and (h23 == true) and (h24 == true):
 			if (h31 == true) and (h32 == true) and (h33 == true) and (h34 == true):
 				if (h41 == true) and (h42 == true) and (h43 == true) and (h44 == true):
-						print('yayyay')
+						$"../next".global_position = $"../..".global_position
 
 
 func _on_h_11_body_entered(body: Node2D) -> void:
@@ -190,3 +190,7 @@ func _on_h_44_body_entered(body: Node2D) -> void:
 func _on_h_44_body_exited(body: Node2D) -> void:
 	if body.name == 'h44':
 		h44 = false
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file('res://horizon_puzzle.tscn')

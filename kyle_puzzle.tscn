@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://brr0eisje51n0" path="res://h_43.gd" id="20_6gh8h"]
 [ext_resource type="Texture2D" uid="uid://fmcbifrg6s1x" path="res://assets/frame/black.png" id="20_pmdwj"]
 [ext_resource type="Script" uid="uid://c58fsiukp7cso" path="res://h_44.gd" id="21_j7ugq"]
+[ext_resource type="Texture2D" uid="uid://dt3t4gx614vx0" path="res://assets/frame/next_cyan.png" id="21_sknk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i7bs"]
 texture = ExtResource("1_sv4ud")
@@ -3358,15 +3359,24 @@ sprite_frames = SubResource("SpriteFrames_g5asx")
 shape = SubResource("RectangleShape2D_fr6tj")
 
 [node name="next" type="Node2D" parent="base" unique_id=1567705096]
-
-[node name="Button" type="Button" parent="base/next" unique_id=1809916725]
-offset_right = 8.0
-offset_bottom = 8.0
+position = Vector2(1561, -1014)
 
 [node name="Sprite2D" type="Sprite2D" parent="base/next" unique_id=255464000]
-position = Vector2(599, 385)
-scale = Vector2(12.98, 8.7)
+self_modulate = Color(1, 1, 1, 0.5294118)
+position = Vector2(561.99994, 325.00003)
+scale = Vector2(15.86, 9.900001)
 texture = ExtResource("20_pmdwj")
+
+[node name="Button" type="Button" parent="base/next" unique_id=1809916725]
+offset_left = 215.0
+offset_top = 119.0
+offset_right = 871.0
+offset_bottom = 449.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="base/next" unique_id=1737616540]
+position = Vector2(550.00006, 377.99997)
+scale = Vector2(9.3, 9.23)
+texture = ExtResource("21_sknk5")
 
 [connection signal="body_entered" from="base/tile_detectors/row_1/h11" to="base/tile_detectors" method="_on_h_11_body_entered"]
 [connection signal="body_exited" from="base/tile_detectors/row_1/h11" to="base/tile_detectors" method="_on_h_11_body_exited"]
@@ -3446,3 +3456,4 @@ texture = ExtResource("20_pmdwj")
 [connection signal="mouse_exited" from="base/tiles/row_4/h43/h43" to="base/tiles/row_4/h43" method="_on_h_43_mouse_exited"]
 [connection signal="mouse_entered" from="base/tiles/row_4/h44/h44" to="base/tiles/row_4/h44" method="_on_h_44_mouse_entered"]
 [connection signal="mouse_exited" from="base/tiles/row_4/h44/h44" to="base/tiles/row_4/h44" method="_on_h_44_mouse_exited"]
+[connection signal="pressed" from="base/next/Button" to="base/tile_detectors" method="_on_button_pressed"]
