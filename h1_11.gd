@@ -14,16 +14,13 @@ func _physics_process(delta: float) -> void:
 	mouse_pos = get_global_mouse_position()
 	direction = global_position.direction_to(mouse_pos)
 	distance =  global_position.distance_to(mouse_pos)
-	
+	print($".".global_position.y)
 	if inside == true:
 		if Input.is_action_just_pressed("ui_lef"):
 			if dragging == true:
 				dragging = false
 			elif dragging == false:
 				dragging = true
-	
-	
-	
 	if dragging == true:
 		if distance > 3:
 			velocity = direction * 300
@@ -53,10 +50,10 @@ func _physics_process(delta: float) -> void:
 			$".".global_position.y = 672
 	move_and_slide()
 
-func _on_h_53_mouse_entered() -> void:
+func _on_h_11_mouse_entered() -> void:
 	inside = true
 
 
-func _on_h_53_mouse_exited() -> void:
+func _on_h_11_mouse_exited() -> void:
 	inside = false
 	dragging = false
