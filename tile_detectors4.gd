@@ -3,7 +3,7 @@ var h11 = false
 var h12 = false
 var h13 = false
 var h14 = false
-var h15 = true
+var h15 = false
 
 var h21 = false
 var h22 = false
@@ -39,6 +39,7 @@ func _process(_delta: float) -> void:
 		if (h21 == true) and (h22 == true) and (h23 == true) and (h24 == true):
 			if (h31 == true) and (h32 == true) and (h33 == true) and (h34 == true):
 				if (h41 == true) and (h42 == true) and (h43 == true) and (h44 == true):
+					if h14 == false:
 						$"../next".global_position = $"../..".global_position
 
 
@@ -71,6 +72,14 @@ func _on_h_13_body_exited(body: Node2D) -> void:
 	if body.name == 'h13':
 		h13 = false
 
+func _on_h_14_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		h14 = true
+
+
+func _on_h_14_body_exited(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		h14 = false
 
 func _on_h_21_body_entered(body: Node2D) -> void:
 	if body.name == 'h21':

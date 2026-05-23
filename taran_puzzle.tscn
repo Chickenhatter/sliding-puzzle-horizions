@@ -2674,6 +2674,9 @@ sources/0 = SubResource("TileSetAtlasSource_1onrn")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2kbu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca4xf"]
+size = Vector2(147, 147)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_111t3"]
 size = Vector2(148, 148)
 
@@ -2844,9 +2847,9 @@ shape = SubResource("RectangleShape2D_x2kbu")
 
 [node name="h13" type="Area2D" parent="base/tile_detectors/row_1" unique_id=788349640]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="base/tile_detectors/row_1/h13" unique_id=822202919]
-position = Vector2(622, 76)
-shape = SubResource("RectangleShape2D_x2kbu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base/tile_detectors/row_1/h13" unique_id=313910408]
+position = Vector2(622.5, 75.5)
+shape = SubResource("RectangleShape2D_ca4xf")
 
 [node name="h14" type="Area2D" parent="base/tile_detectors/row_1" unique_id=792256216]
 
@@ -3004,7 +3007,7 @@ sprite_frames = SubResource("SpriteFrames_bjweq")
 shape = SubResource("RectangleShape2D_111t3")
 
 [node name="h12" type="CharacterBody2D" parent="base/tiles/row_1" unique_id=1658894221]
-position = Vector2(473, 225)
+position = Vector2(622, 225)
 platform_floor_layers = 0
 script = ExtResource("5_v4ehf")
 
@@ -3023,7 +3026,7 @@ shape = SubResource("RectangleShape2D_111t3")
 [node name="row_2" type="Node2D" parent="base/tiles" unique_id=1758742030]
 
 [node name="h21" type="CharacterBody2D" parent="base/tiles/row_2" unique_id=995782009]
-position = Vector2(324, 225)
+position = Vector2(622, 374)
 platform_floor_layers = 0
 script = ExtResource("8_tmfsi")
 
@@ -3040,7 +3043,7 @@ sprite_frames = SubResource("SpriteFrames_dnvwj")
 shape = SubResource("RectangleShape2D_111t3")
 
 [node name="h22" type="CharacterBody2D" parent="base/tiles/row_2" unique_id=249782020]
-position = Vector2(324, 76)
+position = Vector2(473, 76)
 platform_floor_layers = 0
 script = ExtResource("9_bo5hl")
 
@@ -3057,7 +3060,7 @@ sprite_frames = SubResource("SpriteFrames_sh6xy")
 shape = SubResource("RectangleShape2D_111t3")
 
 [node name="h23" type="CharacterBody2D" parent="base/tiles/row_2" unique_id=188115401]
-position = Vector2(473, 374)
+position = Vector2(324, 76)
 platform_floor_layers = 0
 script = ExtResource("10_1dsgt")
 
@@ -3076,7 +3079,7 @@ shape = SubResource("RectangleShape2D_111t3")
 [node name="row_3" type="Node2D" parent="base/tiles" unique_id=352455151]
 
 [node name="h31" type="CharacterBody2D" parent="base/tiles/row_3" unique_id=1123927061]
-position = Vector2(622, 225)
+position = Vector2(473, 225)
 platform_floor_layers = 0
 script = ExtResource("13_ikcwb")
 
@@ -3093,7 +3096,7 @@ sprite_frames = SubResource("SpriteFrames_pslad")
 shape = SubResource("RectangleShape2D_111t3")
 
 [node name="h32" type="CharacterBody2D" parent="base/tiles/row_3" unique_id=724958525]
-position = Vector2(473, 76)
+position = Vector2(324, 225)
 platform_floor_layers = 0
 script = ExtResource("14_b16tn")
 
@@ -3110,7 +3113,7 @@ sprite_frames = SubResource("SpriteFrames_3hxdt")
 shape = SubResource("RectangleShape2D_111t3")
 
 [node name="h33" type="CharacterBody2D" parent="base/tiles/row_3" unique_id=1624166774]
-position = Vector2(622, 374)
+position = Vector2(473, 374)
 platform_floor_layers = 0
 script = ExtResource("15_dqrl4")
 

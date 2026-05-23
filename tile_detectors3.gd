@@ -38,7 +38,8 @@ func _process(_delta: float) -> void:
 	if (h11 == true) and (h12 == true):
 		if (h21 == true) and (h22 == true) and (h23 == true):
 			if (h31 == true) and (h32 == true) and (h33 == true):
-				$"../next".global_position = $"../..".global_position
+				if h13 == false:
+					$"../next".global_position = $"../..".global_position
 
 
 func _on_h_11_body_entered(body: Node2D) -> void:
@@ -62,12 +63,12 @@ func _on_h_12_body_exited(body: Node2D) -> void:
 
 
 func _on_h_13_body_entered(body: Node2D) -> void:
-	if body.name == 'h13':
+	if body is CharacterBody2D:
 		h13 = true
 
 
 func _on_h_13_body_exited(body: Node2D) -> void:
-	if body.name == 'h13':
+	if body is CharacterBody2D:
 		h13 = false
 
 

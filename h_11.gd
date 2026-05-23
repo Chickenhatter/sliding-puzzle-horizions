@@ -21,14 +21,22 @@ func _physics_process(delta: float) -> void:
 				dragging = false
 			elif dragging == false:
 				dragging = true
-	
-	
-	
 	if dragging == true:
 		if distance > 3:
 			velocity = direction * 300
 		else:
 			velocity = direction * distance
+	else:
+		if ($".".position.x < 344.0) and ($".".position.x > 304.0):
+			$".".position.x = 324
+		if ($".".position.x < 493.0) and ($".".position.x > 453.0):
+			$".".position.x = 473
+		if ($".".position.x < 642.0) and ($".".position.x > 602.0):
+			$".".position.x = 622
+		if ($".".position.x < 791.0) and ($".".position.x > 751.0):
+			$".".position.x = 771.0
+		if ($".".position.x < 940.0) and ($".".position.x > 900.0):
+			$".".position.x = 920
 
 	move_and_slide()
 

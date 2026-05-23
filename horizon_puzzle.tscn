@@ -3106,6 +3106,12 @@ shape = SubResource("RectangleShape2D_jhfpu")
 position = Vector2(771, 76)
 shape = SubResource("RectangleShape2D_jhfpu")
 
+[node name="h15" type="Area2D" parent="Node2D/tile_detectors/row_1" unique_id=1001198103]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/tile_detectors/row_1/h15" unique_id=500302157]
+position = Vector2(771, 76)
+shape = SubResource("RectangleShape2D_jhfpu")
+
 [node name="row_2" type="Node2D" parent="Node2D/tile_detectors" unique_id=1867701466]
 
 [node name="h21" type="Area2D" parent="Node2D/tile_detectors/row_2" unique_id=334012036]
@@ -3651,6 +3657,9 @@ position = Vector2(510.4, 374.39996)
 scale = Vector2(9.3, 9.23)
 texture = ExtResource("29_h1u25")
 
+[node name="Node2D2" type="Node2D" parent="." unique_id=797661830]
+position = Vector2(324, 76)
+
 [connection signal="body_entered" from="Node2D/tile_detectors/row_1/h11" to="Node2D/tile_detectors" method="_on_h_11_body_entered"]
 [connection signal="body_exited" from="Node2D/tile_detectors/row_1/h11" to="Node2D/tile_detectors" method="_on_h_11_body_exited"]
 [connection signal="body_entered" from="Node2D/tile_detectors/row_1/h12" to="Node2D/tile_detectors" method="_on_h_12_body_entered"]
@@ -3659,6 +3668,8 @@ texture = ExtResource("29_h1u25")
 [connection signal="body_exited" from="Node2D/tile_detectors/row_1/h13" to="Node2D/tile_detectors" method="_on_h_13_body_exited"]
 [connection signal="body_entered" from="Node2D/tile_detectors/row_1/h14" to="Node2D/tile_detectors" method="_on_h_14_body_entered"]
 [connection signal="body_exited" from="Node2D/tile_detectors/row_1/h14" to="Node2D/tile_detectors" method="_on_h_14_body_exited"]
+[connection signal="body_entered" from="Node2D/tile_detectors/row_1/h15" to="Node2D/tile_detectors" method="_on_h_15_body_entered"]
+[connection signal="body_exited" from="Node2D/tile_detectors/row_1/h15" to="Node2D/tile_detectors" method="_on_h_15_body_exited"]
 [connection signal="body_entered" from="Node2D/tile_detectors/row_2/h21" to="Node2D/tile_detectors" method="_on_h_21_body_entered"]
 [connection signal="body_exited" from="Node2D/tile_detectors/row_2/h21" to="Node2D/tile_detectors" method="_on_h_21_body_exited"]
 [connection signal="body_entered" from="Node2D/tile_detectors/row_2/h22" to="Node2D/tile_detectors" method="_on_h_22_body_entered"]

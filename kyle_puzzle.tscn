@@ -2681,6 +2681,9 @@ sources/0 = SubResource("TileSetAtlasSource_4i7bs")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pmg2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sknk5"]
+size = Vector2(82, 83)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fr6tj"]
 size = Vector2(148, 148)
 
@@ -2962,8 +2965,8 @@ shape = SubResource("RectangleShape2D_7pmg2")
 [node name="h14" type="Area2D" parent="base/tile_detectors/row_1" unique_id=1330310379]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="base/tile_detectors/row_1/h14" unique_id=199290307]
-position = Vector2(771, 76)
-shape = SubResource("RectangleShape2D_7pmg2")
+position = Vector2(740, 107.5)
+shape = SubResource("RectangleShape2D_sknk5")
 
 [node name="row_2" type="Node2D" parent="base/tile_detectors" unique_id=1534316810]
 
